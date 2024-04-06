@@ -79,7 +79,8 @@ morphotypes %>%
   #group_by(amf_species * fragments) %>% 
   summarise(sd = sd(log_abundance)) 
 
-#####Chawia########
+
+# Comparison of abundance of morphotypes in Chawia fragment ---------------
 
 morphoch <- read_csv('data/morphoch.csv')
 shapiro.test(morphoch$abundance)
@@ -99,6 +100,8 @@ TukeyHSD(aov_model)
 morphoch_lsd <-  LSD.test(aov_model, trt = 'amf_species')
 morphoch_lsd$groups
 morphoch_lsd$statistics
+
+# Comparison of abundance of morphotypes in Ngangao fragment --------------
 
 morphong <- read_csv('data/morphong.csv')
 shapiro.test(morphong$abundance)
@@ -120,6 +123,7 @@ morphong_lsd <-  LSD.test(aov_model, trt = 'amf_species')
 morphong_lsd$groups
 morphong_lsd$statistics
 
+# Comparison of abundance of morphotypes in Fururu fragment ---------------
 
 morphofur <- read_csv('data/morphofur.csv')
 shapiro.test(morphofur$abundance)

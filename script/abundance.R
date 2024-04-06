@@ -40,6 +40,8 @@ summary(aov(log1p( morphotypes$abundance) ~ morphotypes$fragments))
 
 aov_model <- aov(log1p(abundance) ~ fragments, data = morphotypes)  
 
+# Comparing means of morphotypes ------------------------------------------
+
 TukeyHSD(aov_model)
 morphotypes_lsd <-  LSD.test(aov_model, trt = 'fragments')
 morphotypes_lsd$groups

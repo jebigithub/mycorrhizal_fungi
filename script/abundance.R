@@ -136,7 +136,6 @@ counts <- morphofur %>%
   group_by(fragments, amf_species) %>% 
   summarise(n = mean(abundance)) %>% 
   arrange(-n) 
-
 aov_model <- aov(log1p(abundance) ~ amf_species, data = morphofur)
 summary(aov_model <- aov(log1p(abundance) ~ amf_species, data = morphofur))
 

@@ -34,6 +34,7 @@ counts
 
 # Log transformed ANOVA Summary -------------------------------------------
 
+
 summary(aov(log1p( morphotypes$abundance) ~ morphotypes$fragments))
 
 # Building final ANOVA model ----------------------------------------------

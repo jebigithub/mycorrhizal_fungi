@@ -97,6 +97,8 @@ counts <- morphoch %>%
 
 aov_model <- aov(log1p(abundance) ~ amf_species, data = morphoch)
 summary(aov_model <- aov(log1p(abundance) ~ amf_species, data = morphoch))
+
+
 TukeyHSD(aov_model)
 morphoch_lsd <-  LSD.test(aov_model, trt = 'amf_species')
 morphoch_lsd$groups
